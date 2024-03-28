@@ -1,0 +1,16 @@
+{
+  "name": "j-blanton-plumbing",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others --names front,back \"npm run dev:fe\" \"npm run dev:be\"",
+    "dev:fe": "npm run dev -w frontend",
+    "dev:be": "npm run dev -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
